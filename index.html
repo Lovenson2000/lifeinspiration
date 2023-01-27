@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator Website</title>
+    <style>
+        /* Place your CSS styles in this file */
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+rgba(9,9,121,1) 35%, 
+ rgba(0,212,255,1) 100%);
+
+}
+
+.main_container{
+    padding: 20% 23%;
+    text-align: center;
+}
+
+.logo{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 3px #0e0125 ;
+}
+
+p{
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+button{
+    margin-top: 20px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    font-size: 22px;
+    width: 180px;
+    height: 40px;
+    font-weight: bold;
+    color: #390692;
+    padding-left: 70px 0;
+}
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1>INSPIRE</h1>
+    </div>
+
+    <div class="main_container">
+        <p id="quote"> If you really want to do something, you will find a way. If you
+            don't, you will find an excuse.
+         </p>
+        <p id="author"> - Jim Rohn</p>
+        <button id="generateNewQuote"> New Quote</button>
+    </div>
+    <script>
+        //Final JavaScript
+const generateQuote = function() {
+    const quotes = [
+    {
+        quote: "Don't wish it was easier, wish you were better.",
+        author: "- Jim Rohn"
+    },
+    {
+        quote: "A man shall not have more than one priority at once.",
+        author: " - Lovenson BEAUCICOT"
+    },
+    {
+        quote: "It is impossible to manufacture or imitate love",
+        author: "- Horace Slughorn"
+    },
+    {
+        quote: "Being different isn't a bad thing. It means that you are brave enough to be yourself.",
+        author: "- Luna Lovegood"
+    },
+    {   
+        quote: "Don't go through life, grow through life.",
+        author: "- Eric Butterworth"
+    },
+    {   
+        quote:"Do the best you can until you know better. Then when you know better, do better.",
+        author: "- Maya Angelou"
+    },
+    {   
+        quote: "Just don't give up trying to do what you really want to do. Where there is love and inspiration, I don't think you can go wrong.",
+        author: "- Ella Fitzgerald"
+    },
+    {   
+        quote: "Be not afraid of growing slowly; be afraid only of standing still.",
+        author: "- Chinese Proverb"
+    },
+    {
+        quote: "It is never too late to be who you might have been.",
+        author: "- George Eliot"
+    },
+    {   
+        quote: "Someone is sitting in the shade today because someone planted a tree a long time ago.",
+        author: "- Warren Buffet"
+    },  
+    {   
+        quote: "Everybody wants to be somebody; nobody wants to grow.",
+        author: "- Johann Wolfgang von Goethe"
+    },
+    {   
+        quote: "Insist on yourself. Never imitate.",
+        author: "- Ralph Waldo Emerson"
+    },
+    {   
+        quote: "There are two ways of spreading light: to be the candle or the mirror that reflects it.",
+        author: "- Edith Wharton"
+    },
+    {   
+        quote: "Focus on yourself until the focus is on you.",
+        author: "- Unknown Author"
+    },
+    {
+        quote: "Your most important sale in life is to sell yourself to yourself.",
+        author: "- Maxwell Maltz"
+    },
+    {
+        quote: " As you start to walk on the way, the way appears.",
+        author: "- Rumi"
+    },
+    {
+        quote: "When you want something bad enough, all the universe conspires in helping you to achieve it",
+        author: "- Paolo Coelho"
+    },
+
+    {
+        quote: "Other people's opinion of you does not have to become your reality.",
+        author: "- Les Brown"
+    },
+
+
+    {
+        quote: "Learn to work harder on yourself than on your job.",
+        author: "- Jim Rohn"
+    },
+
+    {
+        quote: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+        author:"- Albert Einstein"
+
+    },
+
+    {
+        quote: "Definiteness of purpose is the starting point of all achievement.",
+        author:"- W. Clement stone"
+    },
+
+    {
+        quote: "In the absence of clearly defined goals, we become strangely loyal to performing daily trivia until ultimately we become enslaved by them.",
+        author:"- Robert Heinlein"
+    },
+
+    {
+        quote: "Every human life is worth the same, and worth saving.",
+        author: "- Kingsley Shacklebolt"
+    },
+    {
+        quote: "Have a biscuit, Potter.",
+        author: "- Minerva McGonagall"
+    },
+    {
+        quote: "Happiness can be found even in the darkest of times, if one only remembers to turn on the light.",
+        author: "- Albus Dumbledore"
+    },
+    {
+        quote: "Don't be victim of negative self-talk. Remember, you are listening",
+        author: "- Unknown Author"
+    }
+];
+
+    let arrayIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote").innerHTML = quotes[arrayIndex].quote;
+    document.getElementById("author").innerHTML = quotes[arrayIndex].author;
+
+}
+
+document.getElementById("generateNewQuote").addEventListener('click', event=>{generateQuote()});
+
+    </script>
+</body>
+</html>
